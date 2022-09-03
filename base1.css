@@ -1,0 +1,196 @@
+/* 公共的CSS样式*/
+/* CSS初始化 */
+/* 去除自带的样式 */
+*{
+	margin: 0;
+	padding: 0;
+	/* 设置为怪异盒模型 */
+	box-sizing: border-box;
+}
+ul,ol{
+	/* 去除列表项自带的样式 */
+	list-style: none;
+}
+/* 设置整体样式 */
+body{
+	font-family: "微软雅黑";
+	color: #666;
+	font-size: 14px;
+	
+}
+/* 设置链接样式 */
+a{
+	color: #666;
+	text-decoration: none;
+}
+a:hover{
+	color: red;
+}
+/* 去除点击输入框显示的外轮廓 */
+input,textarea{
+	outline: none;
+}
+
+/* 头部 */
+/* 大小 1000*110  水平居中  背景 */
+.header{
+	width: 1000px;
+	height: 110px;
+	margin: 0 auto;
+	/* background-color: pink; */
+	position: relative;
+	z-index: 3;
+	
+}
+.logo{
+	float: left;
+	margin-top: 36px;
+}
+
+.search{
+	float: right;
+	/* height: 30px; */
+	margin-top: 43px;
+/* 	background-color: orange; */
+	
+}
+.search a{
+	float: left;
+	line-height: 26px;
+	font-family: "宋体";
+	font-size: 12px;
+	margin-right: 18px;
+	background: url(../img/weixin.png) no-repeat left center;
+	padding-left: 26px;
+	position: relative;
+}
+.search a img{
+	position: absolute;
+	top:26px;
+	left: -30px;
+	/* 隐藏 */
+	display: none;
+	/* z-index: 1; */
+	
+}
+.search a:hover img{
+	/* 显示 */
+	display: block;
+	/* z-index: 4; */
+}
+
+.search div{
+	float: left;
+	
+}
+.search div input{
+	float: left;
+}
+.search div input[type="text"]{
+	width: 152px;
+	height: 26px;
+	border: 1px solid #DDD;
+	/* 去除右侧边框 */
+	border-right: none;
+	
+}
+.search div input[type="submit"]{
+	width: 26px;
+	height: 26px;
+	background: #86754D url(../img/fdj.png) no-repeat center center;
+	border: 1px solid #DDD;
+	border-left: none;
+}
+/* 导航 */
+.nav{
+	width: 100%;
+	height: 40px;
+	background-color: #f4f3ea;
+	/* 为了提高定位层级 */
+	position: relative;
+	z-index: 2;
+}
+.nav-bd{
+	width: 1000px;
+	height: 40px;
+	/* background-color: pink; */
+	margin: 0 auto;
+}
+.nav ul li{
+	float: left;
+	position: relative;
+	
+}
+.nav ul li a{
+	width: 90px;
+	height: 40px;
+	display: block;
+	line-height: 40px;
+	text-align: center;
+	/* 过渡 */
+	transition: 0.1s linear;
+}
+.nav ul li a:hover, .nav ul li .active{
+	background: url(../img/nav-bg.png) repeat-x;
+	color: #fff;
+}
+/* 查找每个列表项下的有序列表 */
+.nav ul li ol{
+	width: 910px;
+	height: 50px;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	display: none;
+	left: 0;
+	top: 40px;	
+}
+/* 查找ul下的第三个li中的ol */
+.nav ul li:nth-child(3) ol{
+	width: 820px;
+}
+.nav ul li:nth-child(4) ol{
+	width: 730px;
+}
+.nav ul li:nth-child(5) ol{
+	width: 640px;
+}
+.nav ul li:nth-child(6) ol{
+	width: 550px;
+}
+.nav ul li:nth-child(7) ol{
+	width: 460px;
+}
+.nav ul li:nth-child(8) ol{
+	width: 370px;
+}
+
+.nav ul li ol a {
+	height: 50px;
+	line-height: 50px;
+	color: #fff;
+	/* 去除之前标签a的宽度*/
+	width: auto;
+	/* 内边距 */
+	padding: 0 15px;
+	
+}
+.nav ul li ol a:hover {
+	background: rgba(0,0,0,0.3);
+	/* z-index: 4; */
+}
+/* 鼠标滑过一级导航，显示对应的二级导航 */
+.nav ul li:hover ol {
+	display: block;
+	/* z-index: 4; */
+}
+/* 底部 */
+.footer{
+	width: 100%;
+	height: 80px;
+	background-color: #837651;
+	text-align: center;
+	padding-top: 15px;
+	line-height: 20px;
+	color: #fff;
+	font-size: 12px;
+}

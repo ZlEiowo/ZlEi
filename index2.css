@@ -1,0 +1,277 @@
+/* 首页样式文件 */
+.banner{
+	width: 100%;
+	height:449px;
+    background:url(../img/banner-bg.png);
+     /* 为了提高定位层级 */
+	 position: relative;
+	 z-index: 1;
+}
+.banner-bd{
+	width: 1000px;
+	height: 449px;
+	margin: 0 auto;
+	background-color: pink;
+	position: relative;
+	/* 溢出隐藏 */
+	overflow:hidden;
+}
+.banner-bd span{
+	position: absolute;
+	width: 40px;
+	height: 70px;
+	background:url(../img/arr.png) no-repeat;
+	/* 垂直居中 */
+	top: 50%;
+	margin-top: -35px;
+	}
+	/* 左侧箭头 */
+.banner-bd .prev{
+	left: -40px;
+	/* 过渡 */
+	transition:0.1s linear ;
+}
+/* 当鼠标滑过版心盒子 */
+.banner-bd:hover .prev{
+	left: 0px;
+}
+/* 右侧箭头 */
+.banner-bd .next{
+	right: -40px;
+	/* 背景图像水平右对齐 */
+	background-position: right 0;
+	transition: 0.1s linear;
+	
+}
+.banner-bd:hover .next{
+	right: 0;
+	
+}
+.banner-bd ol{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 29px;
+	background-color: rgba(255,255,255,0.5);
+	border-top: 1px solid #fff;
+	/* 行内块水平居中 */
+	text-align: center;
+	/* 去除行内块边距 */
+	font-size: 0;
+	
+	
+	
+}
+
+.banner-bd ol li{
+	width: 13px;
+	height: 13px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 50%;
+	/* 转为行内块成一行展示 */
+	display: inline-block;
+	margin: 8px 3px;
+	
+	
+}
+.banner-bd ol .active{
+	background-color: #fff;
+}
+.container{
+	width: 1000px;
+	margin: 48px auto 51px;
+	/* background-color: pink; */
+	/* 设置为弹性布局 */
+	display: flex;
+	/* 两端对齐 */
+	justify-content: space-between;
+}
+.focus{
+	width: 376px;
+	height: 282px;
+	/* background-color: orange; */
+	border: 1px solid #D9D9D9;
+	padding: 1px;
+	position: relative;
+}
+.focus ul li{
+	position: relative;
+}
+.focus ul li img{
+	width: 372px;
+	height: 278px;
+	display: block;
+}
+.focus ul li p{
+	width: 372px;
+	height: 30px;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	line-height: 30px;
+	padding-left: 8px;
+	color: #fff;
+}
+/* 指示器 */
+.focus ol{
+	width: 68px;
+	height: 5px;
+	/* background-color: orange; */
+	position: absolute;
+	right: 13px;
+	bottom: 13px;
+	display: flex;
+	justify-content: space-between;
+}
+.focus ol li{
+	width: 14px;
+	height: 5px;
+	background-color: #fff;
+	border-radius: 3px;
+}
+.focus ol .active{
+	background-color: red;
+}
+.news{
+	width: 566px;
+	height: 282px;
+	/* background-color: lightblue; */
+	
+}
+.news-hd{
+	height: 30px;
+	/* background-color: orange; */
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #ddd;
+}
+.news-hd h3{
+	/* 取消加粗 */
+	font-weight: normal;
+	color: #333;
+	font-size: 20px;
+	
+}
+.news-hd h3 span{
+	font-size: 14px;
+	font-family: arial;
+	color: #82754e;
+}
+.news-hd a{
+	color: #989898;
+	font-size: 12px;
+	font-family: "宋体";
+	line-height: 30px;
+}
+.news-bd {
+	margin-top: 9px;
+	line-height: 30px;
+}
+.news-bd li{
+	display: flex;
+	justify-content: space-between;
+	/* border: 1px solid red; */
+	border-bottom: 1px dotted #ccc;
+}
+.news-bd li span{
+	color: #999;
+	font-size: 12px;
+	font-family: "宋体";
+}
+/* 二楼 公司业务 */
+.com{
+	width: 100%;
+	/* height: 100px; */
+	background: url(../img/banner-bg.png);
+}
+.com-bd{
+	width: 1000px;
+	/* height: 100px; */
+	/* background-color: pink; */
+	margin: 0px auto;
+	padding-top: 12px;
+}
+.com-bd1{
+	display: flex;
+	justify-content: space-between;
+	height: 36px;
+	line-height: 36px;
+	/* 下边框 */
+	border-bottom: 1px solid #ddd;
+	
+}
+.com-bd1 h3{
+	color: #333;
+	font-size: 20px;
+	font-weight: normal;
+}
+.com-bd1 h3 span{
+	color: #82754e;
+	font-size: 14px;
+	font-family: Arial;
+}
+.com-bd1 a{
+	font-size: 14px;
+	color: #989898;
+	font-family: "宋体";
+}
+.com-bd2{
+	display: flex;
+	justify-content: space-between;
+	padding: 38px 0;
+}
+.com-bd2 li{
+	position: relative;
+	/* 过渡 */
+	transition: 0.1s linear;
+}
+.com-bd2 li:hover{
+	margin-top: -2px;
+	transform: translate(0,-2px);
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+.com-bd2 li div{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	left: 0;
+	top: 0;
+	
+}
+.com-bd2 li img{
+	/* 去除图片下方的空白节点 */
+	display: block;
+}
+.com-bd2 li span{
+	width: 87px;
+	height: 87px;
+	background: url(../img/sprite.png);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -43.5px;
+	margin-left: -43.5px;
+}
+/* 找第二个列表 */
+.com-bd2 li:nth-child(2) span{
+	background-position: 0 -97px;
+}
+.com-bd2 li:nth-child(3) span{
+	background-position: 0 -194px;
+}
+.com-bd2 li:nth-child(4) span{
+	background-position: 0 -291px;
+}
+
+.com-bd2 li p{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	text-align: center;
+	bottom: 28px;
+	color: #ffff;
+	font-size: 20px;
+}
